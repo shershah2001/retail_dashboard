@@ -14,14 +14,101 @@ RED = "#C64B4B"
 BG = "#F4F7FB"
 
 st.markdown("""
+
 <style>
-.stApp {background: #F4F7FB;}
-.block-container {padding-top: 1.3rem; padding-bottom: 2rem;}
-h1,h2,h3 {color:#142B4A;}
-[data-testid="stMetric"] {background:white; border:1px solid #E5EAF1; padding:14px 16px; border-radius:12px;}
-[data-testid="stSidebar"] {background:#FFFFFF;}
-div[data-testid="stTabs"] button {font-weight:650;}
+/* Main dashboard background */
+.stApp {
+    background-color: #F4F7FB !important;
+    color: #263445 !important;
+}
+
+.block-container {
+    padding-top: 1.3rem;
+    padding-bottom: 2rem;
+}
+
+/* All headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #142B4A !important;
+}
+
+/* Normal text */
+.stApp p,
+.stApp span,
+.stApp label,
+.stApp li,
+.stMarkdown {
+    color: #334155 !important;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #FFFFFF !important;
+}
+
+[data-testid="stSidebar"] * {
+    color: #263445 !important;
+}
+
+/* Metric cards */
+[data-testid="stMetric"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E5EAF1;
+    padding: 14px 16px;
+    border-radius: 12px;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #64748B !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #142B4A !important;
+}
+
+/* Input fields */
+.stTextInput input,
+.stNumberInput input,
+.stDateInput input {
+    background-color: #FFFFFF !important;
+    color: #263445 !important;
+}
+
+/* Selectbox and multiselect */
+[data-baseweb="select"] {
+    background-color: #FFFFFF !important;
+}
+
+[data-baseweb="select"] * {
+    color: #263445 !important;
+}
+
+/* Tabs */
+div[data-testid="stTabs"] button {
+    font-weight: 650;
+    color: #334155 !important;
+}
+
+div[data-testid="stTabs"] button[aria-selected="true"] {
+    color: #2563EB !important;
+}
+
+/* Dataframe */
+[data-testid="stDataFrame"] {
+    background-color: #FFFFFF !important;
+}
+
+/* Alerts */
+[data-testid="stAlert"] {
+    border-radius: 10px;
+}
+
+/* Plotly chart */
+.js-plotly-plot {
+    background-color: #FFFFFF !important;
+}
 </style>
+
 """, unsafe_allow_html=True)
 
 @st.cache_data(show_spinner="Loading cleaned retail dataset...")
