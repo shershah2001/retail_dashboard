@@ -5,7 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from sklearn.linear_model import LinearRegression
 
-st.set_page_config(page_title="Retail Business Intelligence", page_icon="", layout="wide")
+st.set_page_config(page_title="Retail Business Intelligence", page_icon="icon.png", layout="wide")
 
 NAVY = "#142B4A"
 BLUE = "#2F6B9A"
